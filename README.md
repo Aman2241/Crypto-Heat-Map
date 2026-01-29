@@ -1,16 +1,80 @@
-# React + Vite
+# Crypto Heat Map 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A stunning, real-time visualization of the top 500 cryptocurrencies by market cap, inspired by "bubbling water droplets". Built with React, D3.js, and a premium Glassmorphism aesthetic.
 
-Currently, two official plugins are available:
+![Status](https://img.shields.io/badge/Status-Completed-success)
+![Tech](https://img.shields.io/badge/Tech-React%20%7C%20D3.js%20%7C%20Vite-blue)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- **Real-Time Data**: Fetches live data for the top 500 coins via CoinGecko API.
+- **Dynamic Physics**: Bubbles float, bounce, and interact like water droplets using D3 Force Simulation.
+- **Premium UI**:
+    - **Glassmorphism**: Semi-transparent, glowing bubbles with gradients (Emerald for pumps, Rose for dumps).
+    - **Clutter-Free**: Labels are hidden by default to reduce visual noise.
+    - **Interactive Tooltips**: Hover over any bubble to reveal detailed metrics (Price, Market Cap, 24h Change) in a frosted-glass tooltip.
+- **Responsive**: Adapts gracefully to screen resizing.
+- **Dark Mode**: Deep, immersive dark theme.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technology Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: React + Vite
+- **Visualization**: D3.js (Force Simulation, Pack Layout)
+- **Data**: Axios + CoinGecko API
+- **Styling**: CSS Modules, CSS Variables (Inter Font)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v16+)
+- npm or yarn
+
+### Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/<YOUR_USERNAME>/crypto-heat-map.git
+    cd crypto-heat-map
+    ```
+
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+
+3.  Start the development server:
+    ```bash
+    npm run dev
+    ```
+
+4.  Open `http://localhost:5173` to view the app.
+
+## 🔧 Configuration
+
+### API Proxy
+To avoid CORS issues with the CoinGecko API during local development, this project uses a Vite proxy.
+- **Local Path**: `/api/v3/...`
+- **Target**: `https://api.coingecko.com/api/v3/...`
+- **Config**: See `vite.config.js`
+
+## 📂 Project Structure
+
+```
+src/
+├── components/
+│   └── BubbleChart.jsx  # Core D3.js visualization logic
+├── hooks/
+│   └── useCryptoData.js # Data fetching hook (auto-refresh 60s)
+├── services/
+│   └── api.js           # API service (CoinGecko)
+├── App.jsx              # Main layout
+└── index.css            # Global styles (Glassmorphism, Dark Mode)
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
