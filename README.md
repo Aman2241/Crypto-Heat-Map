@@ -5,6 +5,11 @@ A stunning, real-time visualization of the top 500 cryptocurrencies by market ca
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 ![Tech](https://img.shields.io/badge/Tech-React%20%7C%20D3.js%20%7C%20Vite-blue)
 
+## 🔗 Links
+
+- **📂 GitHub Repository**: [https://github.com/Aman2241/Crypto-Heat-Map](https://github.com/Aman2241/Crypto-Heat-Map)
+- **🚀 Live Demo**: [https://Aman2241.github.io/Crypto-Heat-Map/](https://Aman2241.github.io/Crypto-Heat-Map/)
+
 ## ✨ Features
 
 - **Real-Time Data**: Fetches live data for the top 500 coins via CoinGecko API.
@@ -33,8 +38,8 @@ A stunning, real-time visualization of the top 500 cryptocurrencies by market ca
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/<YOUR_USERNAME>/crypto-heat-map.git
-    cd crypto-heat-map
+    git clone https://github.com/Aman2241/Crypto-Heat-Map.git
+    cd Crypto-Heat-Map
     ```
 
 2.  Install dependencies:
