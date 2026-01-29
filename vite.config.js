@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/crypto-heat-map/',
   plugins: [react()],
   server: {
     proxy: {

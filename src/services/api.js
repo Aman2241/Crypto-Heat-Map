@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-// Use local proxy to avoid CORS
-const API_URL = '/api/v3/coins/markets';
+// Use local proxy in dev, direct URL in prod
+const API_URL = import.meta.env.PROD
+    ? 'https://api.coingecko.com/api/v3/coins/markets'
+    : '/api/v3/coins/markets';
 
 export const fetchCryptoData = async () => {
     try {
